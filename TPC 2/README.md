@@ -65,13 +65,13 @@ a ocorrência dos pronomes pessoais independentemente se é maiúscula ou minús
 
 ## Exercício 7
 
-Com re.findall(r'[a-zA-Z]\w*', linha) verifico se a string resultante é igual à original.
+Com re.findall(r'^[a-zA-Z]\w*', linha) verifico se a string resultante é igual à original.
 Caso não seja é porque o nome da variável não é válido.
 
 ## Exercício 8
 
 Recorremos ao re.findall(r'(?<![\d.,])\-?\d+(?![\d.,])', linha) onde: 
-(?<![\d.,]) garante que antes do número não há "." ou ",",
+(?<![\d.,]) garante que antes do número não há dígitos ou "." ou ",",
 \-? permite um sinal de menos caso haja,
 \d+ captura um dígito ou mais,
 (?![\d.,]) garante que depois do número não há um dígito, ponto ou vírgula.
