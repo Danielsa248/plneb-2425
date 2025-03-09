@@ -1,0 +1,460 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&family=Montserrat:wght@400;700&
+    family=Bebas+Neue&family=Oswald:wght@400;700&family=Playfair+Display:wght@400;700&display=swap" rel="stylesheet">
+    <script src="script.js" defer></script>
+
+    <title>BMW M3 &#128664</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="icon" type="image/png" href="imagens/m3icon.png">
+</head>
+<body>
+    <header>
+        <h1>BMW M3</h1>
+        <h4>The perfect balance between performance and passion</h4>
+    </header>
+    <main>
+        <section>
+            <h2 style="font-family:Montserrat;">M3 Generations</h2>
+            <div class="container" id="mainContainer">
+                <div class="gallery">
+                    <div class="item" onclick="showImage('imagens/e30/m3-e30.jpg')">
+                        <img src="imagens/e30/m3-e30.jpg" alt="BMW M3 E30">
+                        <span><strong>M3 E30</strong></span>
+                    </div>
+                    <div class="item" onclick="showImage('imagens/e36/m3-e36.jpg')">
+                        <img src="imagens/e36/m3-e36.jpg" alt="BMW M3 E36">
+                        <span><strong>M3 E36</strong></span>
+                    </div>
+                    <div class="item" onclick="showImage('imagens/e46/m3-e46.jpg')">
+                        <img src="imagens/e46/m3-e46.jpg" alt="BMW M3 E46">
+                        <span><strong>M3 E46</strong></span>
+                    </div>
+                    <div class="item" onclick="showImage('imagens/e90/m3-e90.jpg')">
+                        <img src="imagens/e90/m3-e90.jpg" alt="BMW M3 E90">
+                        <span><strong>M3 E90</strong></span>
+                    </div>
+                    <div class="item" onclick="showImage('imagens/f80/m3-f80.jpg')">
+                        <img src="imagens/f80/m3-f80.jpg" alt="BMW M3 F80">
+                        <span><strong>M3 F80</strong></span>
+                    </div>
+                    <div class="item" onclick="showImage('imagens/g80/m3-g80.jpg')">
+                        <img src="imagens/g80/m3-g80.jpg" alt="BMW M3 G80">
+                        <span><strong>M3 G80</strong></span>
+                    </div>
+                </div>
+
+                <div class="car_preview">
+                    <img id="mainImage" src="imagens/all-m3.jpg" alt="Default Preview">
+                    <p id="carSpecs"></p>
+                    <button id="seeMore" style="display: none" onclick="buttonClick()">See More</button>
+                </div>
+            </div>
+
+            <div class="extra_info" id="extraInfo">
+                <h2>More About It</h2>
+                <div id="infoE30" class="car_details" style="display: none;">
+                    <blockquote cite="https://www.bmw-m.com/en/topics/magazine-article-pool/bmw-m3-generationen.html">
+                        The BMW M3 E30 served as the homologation model for the German Touring Car Championship
+                        (DTM). But demand for the street version was much higher than the 5,000 units stipulated
+                        by the rules. Customers were fascinated by the M10 four-cylinder naturally aspirated engine,
+                        whose cylinder head was derived from the legendary BMW M1 engine. In the end, 16,949 of the
+                        first M3 were produced. Along with the BMW M3 Sport Evolution, the BMW M3 E30 Convertible is
+                        very rare, with less than 800 manufactured.
+                    </blockquote>
+
+                    <div class="container_cards">
+                        <div class="card">
+                        <h3><strong>Naturally aspirated car</strong></h3>
+                        </div>
+                        <div class="card">
+                            <h3><strong>TORQUE</strong></h3>
+                            <p>230 - 240 Nm</p>
+                        </div>
+                        <div class="card">
+                            <h3><strong>0 to 100 km/h</strong></h3>
+                            <p>7.3 - 6.5 seconds</p>
+                        </div>
+                        <div class="card">
+                            <h3><strong>MAX SPEED</strong></h3>
+                            <p>235 km/h</p>
+                        </div>
+                        <div class="card">
+                            <div class="engine_sound">
+                                <h3><strong>Engine S14</strong></h3>
+                                <img src="imagens/e30/engine_e30.jpg" alt="Engine BMW M3 E30" style="width:100px;height:70px;">
+                                <audio id="engineSoundE30" src="sons/e30/engine.mp3"
+                                       onplay="showStopButton('stopButtonE30')"
+                                       onpause="hideStopButton('stopButtonE30')" preload="auto"></audio>
+                                <button onclick="toggleAudio('engineSoundE30', 'stopButtonE30')">Start Engine</button>
+                                <button id="stopButtonE30" onclick="stopAudio('engineSoundE30', 'stopButtonE30')"
+                                        style="display: none;">Turn Off Engine</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div style="display: flex; flex-wrap: wrap; justify-content: center; gap: 30px">
+                        <div style="display: flex; justify-content: center; margin: 10px; gap: 40px">
+                            <img src="imagens/e30/1.jpg" alt="BMW M3 E30" style="width:600px;height:400px;">
+                            <img src="imagens/e30/2.jpg" alt="BMW M3 E30" style="width:600px;height:400px;">
+                        </div>
+                        <div style="display: flex; justify-content: center; margin: 10px; gap: 40px">
+                            <img src="imagens/e30/3.jpg" alt="BMW M3 E30" style="width:600px;height:400px;">
+                            <img src="imagens/e30/4.jpg" alt="BMW M3 E30" style="width:600px;height:400px;">
+                        </div>
+                        <div style="display: flex; justify-content: center; margin: 10px; gap: 40px">
+                            <img src="imagens/e30/5.jpg" alt="BMW M3 E30" style="width:600px;height:400px;">
+                            <img src="imagens/e30/6.jpg" alt="BMW M3 E30" style="width:600px;height:400px;">
+                        </div>
+                    </div>
+
+                    <div class="video" style="position: relative; overflow: hidden; width: 100%; max-width: 600px;
+                    aspect-ratio: 16 / 9; background: #000; margin: 0 auto;">
+                        <iframe src="https://www.youtube.com/embed/coWbIA1OgwM"
+                            title="Garagem 20"
+                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                            allowfullscreen
+                            style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border: 0;">
+                        </iframe>
+                    </div>
+                </div>
+
+                <div id="infoE36" class="car_details" style="display: none;">
+                    <blockquote cite="https://www.bmw-m.com/en/topics/magazine-article-pool/bmw-m3-generationen.html">
+                        In contrast to its predecessor, the second-generation BMW M3 wasn’t primarily developed
+                        as homologation vehicle for motor racing. Besides its improved suitability for everyday use,
+                        the BMW M3 E36 is known in particular for the powerful sound of its straight six-cylinder
+                        engine with high-rev concept. To this end, the M engineers adapted the BMW 3 above all under
+                        the bonnet to match the strongly increased performance of the M3. This resulted in fantastic
+                        driving performance in an understated chassis – which was enthusiastically received.
+                        Even today, the M3 E36 mirrors the Zeitgeist of the 1990s, while its reserved design is timeless.
+                    </blockquote>
+
+                    <div class="container_cards">
+                        <div class="card">
+                        <h3><strong>Naturally aspirated car</strong></h3>
+                        </div>
+                        <div class="card">
+                            <h3><strong>TORQUE</strong></h3>
+                            <p>286 - 321 Nm</p>
+                        </div>
+                        <div class="card">
+                            <h3><strong>0 to 100 km/h</strong></h3>
+                            <p>6.0 - 5.5 seconds</p>
+                        </div>
+                        <div class="card">
+                            <h3><strong>MAX SPEED</strong></h3>
+                            <p>250 km/h</p>
+                        </div>
+                        <div class="card">
+                            <div class="engine_sound">
+                                <h3><strong>Engine S50B32</strong></h3>
+                                <img src="imagens/e36/engine_e36.jpg" alt="Engine BMW M3 E36" style="width:100px;height:70px;">
+                                <audio id="engineSoundE36" src="sons/e36/engine.mp3"
+                                       onplay="showStopButton('stopButtonE36')" onpause="hideStopButton('stopButtonE36')"
+                                       preload="auto"></audio>
+                                <button onclick="toggleAudio('engineSoundE36', 'stopButtonE36')">Start Engine</button>
+                                <button id="stopButtonE36" onclick="stopAudio('engineSoundE36', 'stopButtonE36')"
+                                        style="display: none;">Turn Off Engine</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div style="display: flex; flex-wrap: wrap; justify-content: center; gap: 30px">
+                        <div style="display: flex; justify-content: center; margin: 10px; gap: 40px">
+                            <img src="imagens/e36/1.jpg" alt="BMW M3 E36" style="width:600px;height:400px;">
+                            <img src="imagens/e36/2.jpg" alt="BMW M3 E36" style="width:600px;height:400px;">
+                        </div>
+                        <div style="display: flex; justify-content: center; margin: 10px; gap: 40px">
+                            <img src="imagens/e36/3.jpg" alt="BMW M3 E36" style="width:600px;height:400px;">
+                            <img src="imagens/e36/4.jpg" alt="BMW M3 E36" style="width:600px;height:400px;">
+                        </div>
+                        <div style="display: flex; justify-content: center; margin: 10px; gap: 40px">
+                            <img src="imagens/e36/5.jpg" alt="BMW M3 E36" style="width:600px;height:400px;">
+                            <img src="imagens/e36/6.jpg" alt="BMW M3 E36" style="width:600px;height:400px;">
+                        </div>
+                    </div>
+
+                    <div class="video" style="position: relative; overflow: hidden; width: 100%; max-width: 600px;
+                    aspect-ratio: 16 / 9; background: #000; margin: 0 auto;">
+                        <iframe src="https://www.youtube.com/embed/KDMUnZ0JRk0"
+                            title="1999 BMW E36 M3 S52"
+                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                            allowfullscreen
+                            style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border: 0;">
+                        </iframe>
+                    </div>
+                </div>
+
+                <div id="infoE46" class="car_details" style="display: none;">
+                    <blockquote cite="https://www.bmw-m.com/en/topics/magazine-article-pool/bmw-m3-generationen.html">
+                        Strong, fast and beautiful: when the new BMW M3 was launched in 2000, it immediately
+                        conquered the hearts of hp enthusiasts. The concept of the high-rev six-cylinder engine was
+                        retained. The sound was a winner, but in everyday use the car could also be as quiet as a
+                        lamb. Those wanting to enjoy the real power could stay on the gas until 8,000 revs, but
+                        didn’t have to. Already at 2,000 the four-valve engine delivered 80% of the maximum torque.
+                        The S54 engine also convinced the trade from the start: From 2001 to 2006 it won Engine of
+                        the Year. The special edition M3 CSL is today one of the most sought-after M models among collectors.
+                    </blockquote>
+
+                    <div class="container_cards">
+                        <div class="card">
+                        <h3><strong>Naturally aspirated car</strong></h3>
+                        </div>
+                        <div class="card">
+                            <h3><strong>TORQUE</strong></h3>
+                            <p>365 - 370 Nm</p>
+                        </div>
+                        <div class="card">
+                            <h3><strong>0 to 100 km/h</strong></h3>
+                            <p>5.5 - 4.9 seconds</p>
+                        </div>
+                        <div class="card">
+                            <h3><strong>MAX SPEED</strong></h3>
+                            <p>250 km/h</p>
+                        </div>
+                        <div class="card">
+                            <div class="engine_sound">
+                                <h3><strong>Engine S54</strong></h3>
+                                <img src="imagens/e46/engine_e46.jpg" alt="Engine BMW M3 E46" style="width:100px;height:70px;">
+                                <audio id="engineSoundE46" src="sons/e46/engine.mp3"
+                                       onplay="showStopButton('stopButtonE46')" onpause="hideStopButton('stopButtonE46')"
+                                       preload="auto"></audio>
+                                <button onclick="toggleAudio('engineSoundE46', 'stopButtonE46')">Start Engine</button>
+                                <button id="stopButtonE46" onclick="stopAudio('engineSoundE46', 'stopButtonE46')"
+                                        style="display: none;">Turn Off Engine</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div style="display: flex; flex-wrap: wrap; justify-content: center; gap: 30px">
+                        <div style="display: flex; justify-content: center; margin: 10px; gap: 40px">
+                            <img src="imagens/e46/1.jpg" alt="BMW M3 E46" style="width:600px;height:400px;">
+                            <img src="imagens/e46/2.jpg" alt="BMW M3 E46" style="width:600px;height:400px;">
+                        </div>
+                        <div style="display: flex; justify-content: center; margin: 10px; gap: 40px">
+                            <img src="imagens/e46/3.jpg" alt="BMW M3 E46" style="width:600px;height:400px;">
+                            <img src="imagens/e46/4.jpg" alt="BMW M3 E46" style="width:600px;height:400px;">
+                        </div>
+                        <div style="display: flex; justify-content: center; margin: 10px; gap: 40px">
+                            <img src="imagens/e46/5.jpg" alt="BMW M3 E46" style="width:600px;height:400px;">
+                            <img src="imagens/e46/6.jpg" alt="BMW M3 E46" style="width:600px;height:400px;">
+                        </div>
+                    </div>
+
+                    <div class="video" style="position: relative; overflow: hidden; width: 100%; max-width: 600px;
+                    aspect-ratio: 16 / 9; background: #000; margin: 0 auto;">
+                        <iframe src="https://www.youtube.com/embed/85Dc3FKkeN8"
+                            title="2001 BMW M3 E46 POV"
+                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                            allowfullscreen
+                            style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border: 0;">
+                        </iframe>
+                    </div>
+                </div>
+
+                <div id="infoE90" class="car_details" style="display: none;">
+                    <blockquote cite="https://www.bmw-m.com/en/topics/magazine-article-pool/bmw-m3-generationen.html">
+                        The series six-cylinder engine of the predecessor models had reached the end of its
+                        development potential for the time being. So, for the first and only time in its history
+                        the BMW M3 E90 was granted eight cylinders – and once again the engineers delivered a
+                        masterpiece. The S65 engine, based in outline on the V10 from the BMW M5 E60 from 2005,
+                        offers the driver a top performance of 309 kW (420 hp) and loves the revs: right up to 8,300 rpm.
+                    </blockquote>
+
+                    <div class="container_cards">
+                        <div class="card">
+                        <h3><strong>Naturally aspirated car</strong></h3>
+                        </div>
+                        <div class="card">
+                            <h3><strong>TORQUE</strong></h3>
+                            <p>400 - 440 Nm</p>
+                        </div>
+                        <div class="card">
+                            <h3><strong>0 to 100 km/h</strong></h3>
+                            <p>5.3 - 4.4 seconds</p>
+                        </div>
+                        <div class="card">
+                            <h3><strong>High-rev concept up to 8,300 rpm</strong></h3>
+                        </div>
+                        <div class="card">
+                            <div class="engine_sound">
+                                <h3><strong>Engine S65 V8</strong></h3>
+                                <img src="imagens/e90/engine_e90.jpg" alt="Engine BMW M3 E90" style="width:100px;height:70px;">
+                                <audio id="engineSoundE90" src="sons/e90/engine.mp3"
+                                       onplay="showStopButton('stopButtonE90')" onpause="hideStopButton('stopButtonE90')"
+                                       preload="auto"></audio>
+                                <button onclick="toggleAudio('engineSoundE90', 'stopButtonE90')">Start Engine</button>
+                                <button id="stopButtonE90" onclick="stopAudio('engineSoundE90', 'stopButtonE90')"
+                                        style="display: none;">Turn Off Engine</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div style="display: flex; flex-wrap: wrap; justify-content: center; gap: 30px">
+                        <div style="display: flex; justify-content: center; margin: 10px; gap: 40px">
+                            <img src="imagens/e90/1.jpg"  alt="BMW M3 E90" style="width:600px;height:400px;">
+                            <img src="imagens/e90/2.jpg"  alt="BMW M3 E90" style="width:600px;height:400px;">
+                        </div>
+                        <div style="display: flex; justify-content: center; margin: 10px; gap: 40px">
+                            <img src="imagens/e90/3.jpg" alt="BMW M3 E90" style="width:600px;height:400px;">
+                            <img src="imagens/e90/4.jpg" alt="BMW M3 E90" style="width:600px;height:400px;">
+                        </div>
+                        <div style="display: flex; justify-content: center; margin: 10px; gap: 40px">
+                            <img src="imagens/e90/5.jpg"  alt="BMW M3 E90" style="width:600px;height:400px;">
+                            <img src="imagens/e90/6.jpg"  alt="BMW M3 E90" style="width:600px;height:400px;">
+                        </div>
+                    </div>
+
+                    <div class="video" style="position: relative; overflow: hidden; width: 100%; max-width: 600px;
+                    aspect-ratio: 16 / 9; background: #000; margin: 0 auto;">
+                        <iframe src="https://www.youtube.com/embed/Y2_wNR1-yxE"
+                            title="BMW M3 E92 4.0 V8 "
+                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                            allowfullscreen
+                            style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border: 0;">
+                        </iframe>
+                    </div>
+                </div>
+
+                <div id="infoF80" class="car_details" style="display: none;">
+                    <blockquote cite="https://www.bmw-m.com/en/topics/magazine-article-pool/bmw-m3-generationen.html">
+                        From the fifth generation on, the BMW M3 was only manufactured as a four-door sedan.
+                        The technically more or less identical coupés and convertibles were now called M4.
+                        The basic model delivered a generous 317 kW (431 hp), while the top performance with
+                        the optional Competition package rose to 331 kW (450 hp) and the limited CS model was
+                        even more powerful. Lightweight construction again played an important part with the BMW
+                        M3 F80. The bonnet for instance was made of aluminium, the roof and the prop shaft of
+                        carbon and the strut brace – also of carbon fibre reinforced plastic – weighed just 1.5 kg.
+                    </blockquote>
+
+                    <div class="container_cards">
+                        <div class="card">
+                        <h3><strong>Turbo</strong></h3>
+                        </div>
+                        <div class="card">
+                            <h3><strong>TORQUE</strong></h3>
+                            <p>550 - 600 Nm</p>
+                        </div>
+                        <div class="card">
+                            <h3><strong>0 to 100 km/h</strong></h3>
+                            <p>4.3 - 3.9 seconds</p>
+                        </div>
+                        <div class="card">
+                            <h3><strong>Six-cylinder engine for the first time with exhaust turbo charger</strong></h3>
+                        </div>
+                        <div class="card">
+                            <div class="engine_sound">
+                                <h3><strong>Engine S55</strong></h3>
+                                <img src="imagens/f80/engine_f80.jpg" alt="Engine BMW M3 F80" style="width:100px;height:70px;">
+                                <audio id="engineSoundF80" src="sons/f80/engine.mp3" onplay="showStopButton('stopButtonF80')"
+                                       onpause="hideStopButton('stopButtonF80')" preload="auto"></audio>
+                                <button onclick="toggleAudio('engineSoundF80', 'stopButtonF80')">Start Engine</button>
+                                <button id="stopButtonF80" onclick="stopAudio('engineSoundF80', 'stopButtonF80')"
+                                        style="display: none;">Turn Off Engine</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div style="display: flex; flex-wrap: wrap; justify-content: center; gap: 30px">
+                        <div style="display: flex; justify-content: center; margin: 10px; gap: 40px">
+                            <img src="imagens/f80/1.jpg"  alt="BMW M3 F80" style="width:600px;height:400px;">
+                            <img src="imagens/f80/2.jpg"  alt="BMW M3 F80" style="width:600px;height:400px;">
+                        </div>
+                        <div style="display: flex; justify-content: center; margin: 10px; gap: 40px">
+                            <img src="imagens/f80/3.jpg"  alt="BMW M3 F80" style="width:600px;height:400px;">
+                            <img src="imagens/f80/4.jpg"  alt="BMW M3 F80" style="width:600px;height:400px;">
+                        </div>
+                        <div style="display: flex; justify-content: center; margin: 10px; gap: 40px">
+                            <img src="imagens/f80/5.jpg"  alt="BMW M3 F80" style="width:600px;height:400px;">
+                            <img src="imagens/f80/6.jpg"  alt="BMW M3 F80" style="width:600px;height:400px;">
+                        </div>
+                    </div>
+
+                    <div class="video" style="position: relative; overflow: hidden; width: 100%; max-width: 600px;
+                    aspect-ratio: 16 / 9; background: #000; margin: 0 auto;">
+                        <iframe src="https://www.youtube.com/embed/S14JFwGGuO4"
+                            title="535HP BMW M3 F80 Competition POV"
+                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                            allowfullscreen
+                            style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border: 0;">
+                        </iframe>
+                    </div>
+                </div>
+
+                <div id="infoG80" class="car_details" style="display: none;">
+                    <blockquote cite="https://www.bmw-m.com/en/topics/magazine-article-pool/bmw-m3-generationen.html">
+                        How much motorsport can one sedan handle? The BMW M3 G80, which has been produced
+                        since 2020, is testing these limits anew. The model is available with three performance
+                        levels, for the first time with M xDrive all-wheel drive, for the first time in a touring
+                        version. With the optional M Drivers Package, the top speed rises from 250 to 290 km/h.
+                        The BMW M3 G80 is thus once again a sports car suitable for everyday use, whose extremely
+                        high driving potential can really only be experienced on the racetrack.
+                    </blockquote>
+
+                    <div class="container_cards">
+                        <div class="card">
+                        <h3><strong>Turbo</strong></h3>
+                        </div>
+                        <div class="card">
+                            <h3><strong>TORQUE</strong></h3>
+                            <p>550 - 650 Nm</p>
+                        </div>
+                        <div class="card">
+                            <h3><strong>0 to 100 km/h</strong></h3>
+                            <p>4.2 - 3.4 seconds</p>
+                        </div>
+                        <div class="card">
+                            <h3><strong>The first available with M xDrive all-wheel drive</strong></h3>
+                        </div>
+                        <div class="card">
+                            <div class="engine_sound">
+                                <h3><strong>Engine S58</strong></h3>
+                                <img src="imagens/g80/engine_g80.jpg" alt="Engine BMW M3 G80" style="width:100px;height:70px;">
+                                <audio id="engineSoundG80" src="sons/g80/engine.mp3"
+                                       onplay="showStopButton('stopButtonG80')" onpause="hideStopButton('stopButtonG80')"
+                                       preload="auto"></audio>
+                                <button onclick="toggleAudio('engineSoundG80', 'stopButtonG80')">Start Engine</button>
+                                <button id="stopButtonG80" onclick="stopAudio('engineSoundG80', 'stopButtonG80')"
+                                        style="display: none;">Turn Off Engine</button>
+                            </div>
+                        </div>
+                    </div>
+
+                     <div style="display: flex; flex-wrap: wrap; justify-content: center; gap: 30px">
+                        <div style="display: flex; justify-content: center; margin: 10px; gap: 40px">
+                            <img src="imagens/g80/1.jpg"  alt="BMW M3 G80" style="width:600px;height:400px;">
+                            <img src="imagens/g80/2.jpg"  alt="BMW M3 G80" style="width:600px;height:400px;">
+                        </div>
+                        <div style="display: flex; justify-content: center; margin: 10px; gap: 40px">
+                            <img src="imagens/g80/3.jpg"  alt="BMW M3 G80" style="width:600px;height:400px;">
+                            <img src="imagens/g80/4.jpg"  alt="BMW M3 G80" style="width:600px;height:400px;">
+                        </div>
+                        <div style="display: flex; justify-content: center; margin: 10px; gap: 40px">
+                            <img src="imagens/g80/5.jpg" alt="BMW M3 G80" style="width:600px;height:400px;">
+                            <img src="imagens/g80/6.jpg"  alt="BMW M3 G80" style="width:600px;height:400px;">
+                        </div>
+                    </div>
+
+                    <div class="video" style="position: relative; overflow: hidden; width: 100%; max-width: 600px;
+                    aspect-ratio: 16 / 9; background: #000; margin: 0 auto;">
+                        <iframe src="https://www.youtube.com/embed/ueGoScRwCp8"
+                            title="BMW M3 G80 XDrive"
+                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                            allowfullscreen
+                            style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border: 0;">
+                        </iframe>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+    <footer>
+        <h3>&#128663 PLN 24/25 - Daniel Sá &#128663</h3>
+    </footer>
+<script src="script.js"></script>
+</body>
+</html>
