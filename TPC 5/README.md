@@ -1,6 +1,6 @@
 # TPC 5
 
-Os dados do dicionário médico sao primeiramente carregados.
+Os dados do dicionário médico são primeiramente carregados.
 
 Existem duas rotas para mostrar informação diferente ao utilizador:
 
