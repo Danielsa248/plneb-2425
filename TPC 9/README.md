@@ -47,12 +47,19 @@ para explorar os embeddings de forma interativa.
 
 ---
 
-## 📊 Visualização dos Embeddings
+## Visualização dos Embeddings
 
 Abaixo está uma captura de tela da visualização dos embeddings no TensorFlow Embedding Projector. 
 Nesta visualização, é possível observar as relações semânticas entre palavras como "quadribol", 
 "jogo", "treino", "capitão", entre outras, que estão relacionadas ao contexto desportivo do quadribol.
 
 ![Visualização dos Embeddings](embedding_projector.png)
+
+
+### Scatter Plot
+Além do TensorFlow Embedding Projector, foi gerado um scatter plot utilizando PCA (Principal Component Analysis) 
+para reduzir os vetores de 300 dimensões para 2 dimensões. Este gráfico permite visualizar as relações 
+entre palavras selecionadas diretamente no notebook, destacando proximidades semânticas entre palavras como 
+"quadribol", "vassoura", "jogo", entre outras.
 
 ---
