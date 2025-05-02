@@ -1,6 +1,9 @@
 # TPC 9 - Treino de Modelos com Word2Vec
 
-Este projeto consiste no treino de um modelo **Word2Vec** utilizando textos dos livros *Harry Potter e a Câmara Secreta* e *Harry Potter e a Pedra Filosofal*. O objetivo é explorar as relações semânticas entre palavras presentes nos textos, utilizando diferentes funções do modelo Word2Vec e visualizando os embeddings no **TensorFlow Embedding Projector**.
+Este projeto consiste no treino de um modelo **Word2Vec** utilizando textos 
+dos livros *Harry Potter e a Câmara Secreta* e *Harry Potter e a Pedra Filosofal*. 
+O objetivo é explorar as relações semânticas entre palavras presentes nos textos, 
+utilizando diferentes funções do modelo Word2Vec e visualizar os embeddings no **TensorFlow Embedding Projector**.
 
 ---
 
@@ -9,7 +12,7 @@ Este projeto consiste no treino de um modelo **Word2Vec** utilizando textos dos 
 - **`data/`**: Contém os textos dos livros utilizados para treinar o modelo.
   - `Harry_Potter_Camara_Secreta-br.txt`
   - `Harry_Potter_e_A_Pedra_Filosofal.txt`
-- **`models/`**: Diretório onde o modelo treinado e os arquivos para visualização são salvos.
+- **`models/`**: Diretoria onde o modelo treinado e os arquivos para visualização são salvos.
   - `model_harry.txt`: Modelo Word2Vec salvo no formato de texto.
   - `model_harry_tensor.tsv`: Vetores das palavras.
   - `model_harry_metadata.tsv`: Rótulos das palavras.
@@ -28,6 +31,7 @@ Este projeto consiste no treino de um modelo **Word2Vec** utilizando textos dos 
 
 2. **Exploração do Modelo**:
    - Foram realizadas análises semânticas utilizando funções como:
+     - **`get_word`**: Para visualizar o vetor da palavra.
      - **`most_similar`**: Para encontrar palavras mais similares.
      - **`doesnt_match`**: Para identificar palavras que não combinam.
      - **`similarity`**: Para calcular a similaridade entre palavras.
@@ -38,7 +42,8 @@ Este projeto consiste no treino de um modelo **Word2Vec** utilizando textos dos 
      ```bash
      python -m gensim.scripts.word2vec2tensor -i models/model_harry.txt -o model_harry
      ```
-   - Os arquivos gerados foram carregados no [TensorFlow Embedding Projector](https://projector.tensorflow.org) para explorar os embeddings de forma interativa.
+   - Os arquivos gerados foram carregados no [TensorFlow Embedding Projector](https://projector.tensorflow.org) 
+para explorar os embeddings de forma interativa.
 
 ---
 
